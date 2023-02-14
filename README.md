@@ -9,7 +9,7 @@
   </a>
   <br/>
   <br/>
-  🔥 <a href="https://www.youtube.com/watch?v=DjqP67_SnsY&t=335s">Video Introduction</a> 🔥
+  🔥 <a href="https://youtu.be/O1UGBoUi6eU">Video Introduction</a> 🔥
   </p>
   <br>
 </h1>
@@ -24,7 +24,7 @@
   <img src="https://raw.githubusercontent.com/8bithemant/8bithemant/master/svg/dev/tools/visualstudio_code.svg" alt="Twitter" style="vertical-align:top; margin:4px" height="25px">
 </p>
 
-<h2 align="center">Open-source for a mini-ecommerce website provided with a simple ERP backend.
+<h2 align="center">Open-source for a mini-ecommerce website with a simple ERP backend.
 <br/>
 <br/>
 
@@ -48,14 +48,10 @@
 
 # Modules
 
-- ✔️ Patient Admission System (PAS)
-- ✔️ Eletronic Medical Record (EMR)
-- ✔️ Human Resource Management (Admin)
-- ⚡ AI Analysis for Fundus and Dry Eye (Beta)
+- ✔️ Customer management
+- ✔️ Minishop Ecommerce
 
 # About
-
-This product is an IT platform dedicated for Hospital and Clinics management, consiting of 3 principal modules:
 
 <img align="right" src="https://sandrasoft.app/banner3.png" vspace="0" width="460" />
 
