@@ -1,0 +1,64 @@
+version: "3.5"
+
+services:
+  sql:
+    build:
+      context: ./sql
+      args:
+        - SA_PASSWORD=Admin123
+    image: nichealpham95/minishop:sql
+    ports:
+      - 1433:1433
+    networks:
+      - shared_network
+    restart: always
+    volumes:
+      - mssql_volume:/var/opt/mssql
+
+  api:
+    # build:
+    #   context: ./api
+    image: nichealpham95/minishop:api
+    ports:
+      - 2001:80
+    networks:
+      - shared_network
+    restart: always
+    depends_on:
+      - sql
+    env_file:
+      - ./.env
+
+  erp:
+    # build:
+    #   context: ./erp
+    image: nichealpham95/minishop:erp
+    ports:
+      - 3001:80
+    networks:
+      - shared_network
+    restart: always
+    depends_on:
+      - api
+    env_file:
+      - ./.env
+
+  shop:
+    # build:
+    #   context: ./minishop
+    image: nichealpham95/minishop:shop
+    ports:
+      - 3002:80
+    networks:
+      - shared_network
+    restart: always
+    depends_on:
+      - api
+    env_file:
+      - ./.env
+
+networks:
+  shared_network:
+
+volumes:
+  mssql_volume:
