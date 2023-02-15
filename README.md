@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://gramme.io/cassand"><img src="https://nichealpham.github.io/Cassandra-project/public/images/startup.png" alt="Markdownify" width="160"></a>
   <br>
-  <span style="font-size:120px">Minishop Composer</span>
+  <span style="font-size:120px">Minishop Open-Source</span>
   <br>
   <br>
   <a href="https://www.youtube.com/watch?v=DjqP67_SnsY&t=335s">
@@ -55,7 +55,7 @@
 
 <img align="right" src="https://sandrasoft.app/banner3.png" vspace="0" width="460" />
 
-**✔️ 1. SaaS for Company's Back-Office Management**
+**✔️ 1. SaaS for Customer Management**
 
 - Managing customers profiles
 - Booking appointments
@@ -69,9 +69,10 @@
 
 **✔️ 2. E-Commerce platform for Online Sales**
 
-- Place sale orders
-- Inventory management
-- Blogs and articles
+- Sale orders Management
+- Product Showcase and Cart management
+- Blogs and Articles Management
+- Sales and Inventory Reporting System
 
 ---
 
@@ -88,7 +89,13 @@ $ ipconfig
 $ ifconfig
 ```
 
-### Then, replace the IP address in the appropriate place inside .env file
+### Then, replace the IP address inside .env file
+
+It is best to setup DNS for each of these endpoints.
+
+- VUE_APP_API_URL: Contains the IP or DNS of API server
+- VUE_APP_ERP_URL: Contains the IP or DNS of CRM website
+- VUE_APP_SHOP_URL: Contains the IP or DNS of Ecommerce website
 
 ```bash
 VUE_APP_MSSQL_DB_HOST=172.31.117.133
@@ -109,8 +116,9 @@ $ docker-compose up -d
 
 Then navigate to the following URL:
 
-1. [http://localhost:3001](http://localhost:3001): ERP
+1. [http://localhost:3001](http://localhost:3001): ERP platform
 2. [http://localhost:3002](http://localhost:3002): Minishop
+3. [http://localhost:2001](http://localhost:2001): API Swagger
 
 # Credits
 
