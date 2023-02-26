@@ -1,0 +1,76 @@
+/* Instagram Feed */
+.instagram-feed {
+	width: 100%;
+	display: block;
+	position: relative;
+	background-color: #ccc;
+	margin-bottom: 2rem;
+
+	.owl-carousel & {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(51, 51, 51, .4);
+		transition: all 0.4s ease;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 1;
+	}
+
+	&:hover {
+		&:after,
+		.instagram-feed-content {
+		 	opacity: 1;
+		 	visibility: visible;
+		}
+	}
+
+	img {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+.instagram-feed-content {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom:0;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.6rem;
+	transition: all 0.45s ease;
+	opacity: 0;
+	visibility: hidden;
+
+	i {
+		font-weight: normal;
+		margin-right: .8rem;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus {
+			color: $primary-color;
+		}
+
+		+ a {
+			margin-left: 2rem;
+		}
+	}
+}

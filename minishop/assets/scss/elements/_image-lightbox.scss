@@ -1,0 +1,43 @@
+div.vue-lb-header {
+	position: fixed;
+	left: auto;
+	right: 2%;
+	top: 0;
+}
+
+div.vue-lb-info {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 65px;
+	background-color: transparent;
+}
+
+div.vue-lb-modal-thumbnail-active {
+	box-shadow: inset 0 0 0 2px $primary-color;
+}
+
+div.vue-lb-footer {
+	display: none;
+}
+
+div.vue-lb-figure img.vue-lb-modal-image {
+	max-height: calc(100vh - 165px);
+}
+
+@include mq('md', 'max') {
+	button.vue-lb-arrow {
+		height: 40px;
+		border: 1px solid $primary-color;
+		padding: 6px;
+		border-radius: 50%;
+	}
+
+	.vue-lb-left {
+		left: 2rem;
+	}
+
+	.vue-lb-right {
+		right: 2rem;
+	}
+}

@@ -1,0 +1,53 @@
+// Animations
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes product-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// opacity
+
+.load-more-rotating {
+    animation: 1s ease 0s normal both infinite rotating;
+}
+
+.load-more-opacity {
+    animation: 2s ease 0s normal both infinite product-opacity;
+}
+
+.general-opacity {
+    animation: .3s ease 0s normal both infinite product-opacity;
+}

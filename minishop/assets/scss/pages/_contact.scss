@@ -1,0 +1,128 @@
+/* Contact us */
+#map {
+    height: 280px;
+    background-color: #ccc;
+}
+
+.gm-style .gm-style-iw-c {
+    border-radius: 0 !important;
+}
+
+#map address {
+    color: $body-text;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    padding: 0.5rem 0.75rem 0.2rem 0.75rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.direction-link {
+    display: inline-block;
+    margin-top: 1rem;
+    line-height: 1;
+}
+
+.contact-info {
+    margin-bottom: 3rem;
+
+    h3 {
+        margin-top: 0.5rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+        letter-spacing: 0em;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.contact-list {
+    max-width: 270px;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding-left: 3rem;
+        margin-bottom: 1.4rem;
+    }
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    i {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0.3rem;
+        font-size: 2rem;
+        line-height: 1;
+        color: $primary-color;
+    }
+}
+
+.store {
+    margin-bottom: 3rem;
+    color: #616161;
+
+    address,
+    div {
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 0;
+    }
+
+    a:not(.btn) {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    .btn.btn-link {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 2.1rem;
+    }
+}
+
+.store-media {
+    margin-bottom: 0;
+}
+
+.store-title {
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    margin-bottom: 0.8rem;
+    margin-top: -0.2rem;
+}
+
+.store-subtitle {
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    margin-bottom: 0.4rem;
+    margin-top: 3.2rem;
+}
+
+@include mq('md') {
+    #map {
+        height: 380px;
+    }
+}
+
+@include mq('lg') {
+    #map {
+        height: 492px;
+    }
+}

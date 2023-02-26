@@ -1,0 +1,50 @@
+.price-slider {
+    .input-range__track--background {
+        right: 20px;
+        left: 10px;
+    }
+    .input-range__slider {
+        height: 1.5rem;
+        width: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid #555;
+        right: -7.5px;
+    }
+    .input-range__label--value {
+        font-family: 'Open Sans', 'sans-serif';
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 100%;
+        margin-top: 1.8rem;
+        display: block;
+        position: absolute;
+        color: #333333;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1;
+        letter-spacing: -0.01em;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .input-range__label--min,
+    .input-range__label--max {
+        display: none;
+    }
+    .input-range__track--active {
+        background: #333;
+    }
+
+    .input-range__label-container {
+        left: 0;
+    }
+    .input-range__slider-container {
+        top: 50%;
+    }
+}
+.filter-price {
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 14px;
+    .filter-price-range {
+        color: #c96;
+    }
+}

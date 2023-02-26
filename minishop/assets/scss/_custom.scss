@@ -1,0 +1,117 @@
+.trendy-collection {
+    .owl-simple .owl-nav.disabled + .owl-dots {
+        position: relative;
+        margin: -6rem auto 4rem;
+        width: fit-content;
+        z-index: 10;
+    }
+}
+
+.main-nav li.active a.link-active {
+    color: $primary-color;
+}
+
+.brands-carousel {
+    .swiper-prev,
+    .swiper-next {
+        top: 36%;
+    }
+}
+
+.intro-section {
+    padding-top: 5rem;
+}
+
+.home-page .blog-posts {
+    background-color: #fafafa;
+}
+
+.live-search-list {
+    left: -20rem;
+
+    .header-search-wrapper.show & {
+        display: block;
+    }
+}
+@include mq('xl', 'max') {
+    .intro-section {
+        padding-top: 1rem;
+    }
+}
+
+@include mq('lg', 'max') {
+    .slider-container-1:before,
+    .intro-slider-1 .slide-image:before {
+        min-height: 40rem;
+    }
+
+    .intro-slider-container {
+        picture {
+            height: 100%;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .top-menu:not(.top-link-menu) ul {
+        min-width: 182px;
+    }
+}
+
+@include mq('425px', 'max') {
+    .btn-product:before {
+        margin-right: 0.5rem;
+    }
+
+    .product.product-11 .btn-product span {
+        font-size: 1.2rem;
+    }
+}
+
+@include mq('sm', 'max') {
+    .categories {
+        .banner img {
+            max-height: 30rem;
+        }
+    }
+
+    .product.product-11 {
+        .product-price,
+        .product-title {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+body {
+    background: rgb(246, 245, 249);
+}
+
+.container_padding {
+    padding: 25px;
+    @media (max-width: 500px) {
+        padding: 25px 10px;
+    }
+}
+
+.blog_cover {
+    height: 300px;
+    @media (max-width: 500px) {
+        height: 0px;
+    }
+}
+
+.account_iframe {
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    min-height: calc(100vh - 150px);
+    @media (max-width: 500px) {
+        width: 100vw;
+        min-height: calc(100vh - 91px);
+    }
+}

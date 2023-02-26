@@ -1,0 +1,195 @@
+/* Login */
+.form-box {
+    max-width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 2.2rem 2rem 4.4rem;
+    box-shadow: 0 3px 16px rgba(51, 51, 51, 0.1);
+
+    .btn {
+        min-width: 115px;
+    }
+}
+
+.form-tab {
+    .nav.nav-pills {
+        color: $dark-text;
+        border-bottom: 0.1rem solid #ebebeb;
+
+        .nav-item {
+            margin-bottom: -0.1rem;
+
+            + .nav-item {
+                margin-left: 0;
+            }
+
+            &.show .nav-link {
+                color: inherit;
+            }
+        }
+
+        .nav-link {
+            text-transform: capitalize;
+            font-weight: 400;
+            font-size: 2rem;
+            letter-spacing: 0em;
+            color: inherit;
+            border-bottom-width: 0.2rem;
+            padding: 0.9rem 1rem;
+
+            &.active {
+                color: inherit;
+            }
+        }
+    }
+
+    .nav-fill .nav-item {
+        flex: 1 1 0;
+    }
+
+    .tab-content .tab-pane {
+        padding: 2rem 0 0;
+    }
+
+    .form-group {
+        margin-bottom: 1.3rem;
+    }
+
+    .form-footer {
+        padding-top: 0.6rem;
+        padding-bottom: 3rem;
+        border-bottom: 0.1rem solid #ebebeb;
+        margin-bottom: 2.3rem;
+
+        .btn {
+            margin-left: auto;
+            margin-top: 1rem;
+            order: 2;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+
+        a:not(.forgot-link) {
+            text-decoration: underline;
+        }
+
+        .custom-control {
+            margin: 0;
+        }
+
+        .forgot-link {
+            order: -1;
+            width: 100%;
+            margin-bottom: 0.6rem;
+        }
+    }
+}
+
+.form-choice {
+    color: $dark-text;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0em;
+
+    p {
+        margin-bottom: 2.7rem;
+    }
+}
+
+.btn.btn-login {
+    color: $dark-text;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    border: 0.1rem solid #ebebeb;
+    min-width: 0;
+
+    i {
+        text-align: left;
+        display: inline-block;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        min-width: 2rem;
+        on-facebook-f {
+        }
+    }
+
+    &.btn-g {
+        i {
+            color: #cc3333;
+            min-width: 2.6rem;
+        }
+    }
+
+    &.btn-f {
+        i {
+            color: #3366cc;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #f5f6f9;
+    }
+}
+
+.form-choice .col-sm-6:not(:last-child) {
+    margin-bottom: 0.6rem;
+}
+
+@include mq('sm') {
+    .form-choice .col-sm-6:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .form-tab {
+        .form-footer {
+            .btn {
+                width: auto;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@include mq('md') {
+    .form-box {
+        padding: 3.7rem 6rem 6.4rem;
+    }
+
+    .form-tab .nav.nav-pills .nav-link {
+        font-size: 2.4rem;
+    }
+
+    .form-tab {
+        .form-footer {
+            .btn {
+                margin-left: 0;
+                margin-right: 1.6rem;
+                order: -1;
+            }
+
+            .forgot-link {
+                order: 2;
+                width: auto;
+                margin-bottom: 0;
+                margin-left: auto;
+            }
+        }
+    }
+}

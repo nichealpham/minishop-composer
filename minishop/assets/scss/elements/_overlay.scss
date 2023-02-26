@@ -1,0 +1,12 @@
+body {
+    overflow-y: scroll !important;
+    
+    &.loaded {
+        overflow: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    &.mmenu-active .page-wrapper {
+        transform: translate(200px);
+    }
+}

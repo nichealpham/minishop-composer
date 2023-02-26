@@ -1,0 +1,1703 @@
+/* Skin structure */
+
+@import '../config/variables';
+@import '../mixins/buttons';
+@import '../mixins/breakpoints';
+
+$link-color: $primary-color !default;
+
+::-moz-selection {
+    background-color: $primary-color;
+}
+
+::selection {
+    background-color: $primary-color;
+}
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color !important;
+}
+
+a {
+    color: $link-color;
+}
+
+a:hover,
+a:focus {
+    color: darken($link-color, 10%);
+}
+
+.link-underline {
+    box-shadow: 0 1px 0 0 $primary-color;
+}
+
+.text-primary {
+    color: $primary-color !important;
+}
+
+.text-secondary {
+    color: $secondary-color !important;
+}
+
+/* Elements */
+.alert-primary {
+    background-color: $primary-color;
+}
+
+.banner-badge {
+
+    .banner-link:hover,
+    .banner-link:focus {
+        .banner-link-text {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.header-3,
+.header-4 {
+    .header-search-extended {
+        .btn {
+            background-color: transparent;
+            color: #333;
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.btn-video {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+        background-color: $secondary-color;
+    }
+}
+
+.breadcrumb-item {
+    a {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.btn-link {
+    color: $primary-color;
+
+    &:hover,
+    &:focus,
+    .btn-link-dark:hover,
+    .btn-link-dark:focus {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
+/* generated with mixins */
+.btn-primary {
+    @include button-variant(#fff, $primary-color, $primary-color, #fff, $secondary-color, $secondary-color);
+}
+
+.btn-secondary {
+    @include button-variant(#fff, $secondary-color, $secondary-color, #fff, $primary-color, $primary-color);
+}
+
+.btn-white {
+    @include button-variant(#333333, #fff, #fff, #fff, $primary-color, $primary-color);
+}
+
+.btn-white-2 {
+    @include button-variant(#333333, #fff, #fff, #fff, $secondary-color, $secondary-color);
+}
+
+.btn-primary-white {
+    @include button-variant(#fff, $primary-color, $primary-color, $primary-color, #fff, #fff);
+}
+
+.btn-white-primary {
+    @include button-variant($primary-color, #fff, #fff, #fff, $primary-color, $primary-color);
+}
+
+.btn-dark {
+    @include button-variant(#fff, #333, #333, #fff, $primary-color, $primary-color);
+}
+
+.btn-outline {
+    @include button-outline-variant($primary-color, $primary-color,
+    transparent, #ebebeb, #ebebeb,
+    0 5px 10px rgba(0, 0, 0, .05), 0 5px 10px rgba(0, 0, 0, .15));
+}
+
+.btn-outline-primary {
+    @include button-outline-variant($primary-color, $primary-color,
+    transparent, $primary-color,
+    #ebebeb,
+    none, 0 5px 10px rgba(0, 0, 0, .05));
+}
+
+.btn-outline-primary-2 {
+    @include button-outline-variant($primary-color, #fff,
+    $primary-color, $primary-color,
+    $primary-color,
+    none, none);
+}
+
+.btn-outline-light {
+    @include button-outline-variant(#fff, $primary-color,
+    transparent, #fff, #fff
+    );
+}
+
+.btn-outline-dark {
+    @include button-outline-variant(#333333, $primary-color,
+    transparent, #d7d7d7,
+    #ebebeb,
+    none, 0 5px 10px rgba(0, 0, 0, .05));
+}
+
+.btn-outline-dark-2 {
+    @include button-outline-variant(#333333, $primary-color,
+    #fafafa, #ebebeb,
+    #ebebeb,
+    none, none);
+}
+
+.btn-outline-dark-3 {
+    @include button-outline-variant(#333333, $primary-color,
+    transparent, #d7d7d7,
+    $primary-color,
+    none, none);
+}
+
+.btn-outline-darker {
+    @include button-outline-variant(#333333, #fff,
+    $primary-color, #d7d7d7,
+    $primary-color,
+    none, none);
+}
+
+.btn-outline-gray {
+    @include button-outline-variant(#333333, #fff,
+    $primary-color, #959595,
+    $primary-color,
+    none, none);
+}
+
+.btn-outline-lightgray {
+    @include button-outline-variant(#333333, $primary-color,
+    #f5f6f9, #ebebeb,
+    #ebebeb,
+    none, none);
+}
+
+.btn-outline-white {
+    @include button-outline-variant(#fff, #fff,
+    $primary-color, #fff,
+    $primary-color,
+    none, none);
+}
+
+.btn-outline-white-2 {
+    @include button-outline-variant(#fff, #fff,
+    $secondary-color, #fff,
+    $secondary-color,
+    none, none);
+}
+
+.btn-outline-white-4 {
+    @include button-outline-variant(
+        #fff, $primary-color, 
+        #fff, #fff, 
+        #fff,
+        none, none
+    );
+}
+
+.newsletter-popup-container .input-group .btn {
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+    }
+}
+
+.bg-image {
+    .btn-link-dark {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+    .btn-outline-primary {
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show>&.dropdown-toggle {
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+    .btn-outline-dark {
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show>&.dropdown-toggle {
+            color: $primary-color;
+        }
+    }
+}
+
+.card-title {
+    a {
+        color: $primary-color;
+
+        &:before {
+            color: $primary-color;
+        }
+
+        &.collapsed {
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.count-wrapper {
+    color: $primary-color;
+}
+
+.feature-box {
+    i {
+        color: $primary-color;
+    }
+}
+
+.feature-box-simple {
+    i {
+        color: $primary-color;
+    }
+}
+
+.form-control:focus {
+    border-color: $primary-color;
+}
+
+.custom-control.custom-radio {
+    .custom-control-input:checked~.custom-control-label::before {
+        border-color: $primary-color;
+    }
+
+    .custom-control-input:checked~.custom-control-label::after {
+        background-color: $primary-color;
+    }
+}
+
+.icon-box-icon {
+    color: $primary-color;
+}
+
+.icon-box-circle {
+    .icon-box-icon {
+        background-color: $primary-color;
+    }
+}
+
+.instagram-feed-content {
+    a {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.close {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.page-header {
+    h1 {
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.page-link {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.page-item {
+    &.active .page-link {
+        color: $primary-color;
+    }
+}
+
+.social-icon {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
+.testimonial-icon {
+    &:before {
+        color: $primary-color;
+    }
+}
+
+.nav.nav-tabs {
+    .nav-link {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    .nav-item {
+
+        &.show .nav-link,
+        .nav-link.active {
+            color: $primary-color;
+        }
+    }
+}
+
+.nav.nav-pills {
+    .nav-link {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    .nav-item {
+
+        &.show .nav-link,
+        .nav-link.active {
+            color: $primary-color;
+            border-bottom-color: $primary-color;
+        }
+    }
+}
+
+.nav.nav-dark .nav-item .nav-link.active {
+    color: #333;
+}
+
+.nav.nav-border-anim {
+    .nav-link {
+        &:before {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.title-link {
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 1px 0 0 $primary-color;
+    }
+}
+
+.product-countdown {
+    &.countdown-primary {
+        .countdown-amount {
+            color: $primary-color;
+        }
+    }
+}
+
+.product-title a {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.product-price {
+    color: $primary-color;
+}
+
+.product-label {
+    &.label-primary {
+        background-color: $primary-color;
+    }
+
+    &.label-secondary {
+        background-color: $secondary-color;
+    }
+}
+
+.product-label-text {
+    color: $primary-color;
+}
+
+.ratings-val {
+
+    .ratings-primary & {
+        color: $primary-color;
+    }
+}
+
+.ratings-text a {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.btn-product {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+        span {
+            color: $primary-color;
+            box-shadow: 0 1px 0 0 $primary-color;
+        }
+    }
+}
+
+.main-nav li.active a.link-active {
+    color: $primary-color;
+}
+
+.product-details-action .btn-product.btn-cart {
+    &:hover, &:focus {
+        span {
+            color: #fff;
+        }
+    }  
+}
+
+.btn-product-icon {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+    }
+}
+
+.product-body .btn-wishlist {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.btn-expandable {
+
+    span {
+        background-color: $primary-color;
+    }
+}
+
+.product.product-4 {
+    .btn-product {
+
+        &:hover,
+        &:focus {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+.product.product-5 {
+    .btn-product {
+        color: $primary-color;
+
+        &:hover,
+        &:focus {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.product.product-7 {
+    .btn-product {
+        color: $primary-color;
+
+        span {
+            color: $primary-color;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $primary-color;
+            border-bottom-color: $primary-color;
+        }
+    }
+}
+
+.product.product-8 {
+    .new-price {
+        color: $primary-color;
+    }
+
+    .btn-product {
+        &:before {
+            color: $primary-color;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.product.product-list {
+    .btn-product {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+
+        &.btn-cart {
+            color: $primary-color;
+            border-color: $primary-color;
+
+            &:hover,
+            &:focus {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Footers */
+.footer {
+
+    a:hover,
+    a:focus {
+        color: $primary-color;
+    }
+}
+
+.footer-dark {
+    &.footer-2 {
+        .widget-about-title {
+            color: $primary-color;
+        }
+    }
+}
+
+/* Headers */
+.header-top {
+    a {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.top-menu {
+    span {
+        color: $primary-color;
+    }
+}
+
+.header-menu {
+    a {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.account a {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.wishlist a {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+    .wishlist-count {
+        background-color: $primary-color;
+    }
+}
+
+.cart-dropdown,
+.compare-dropdown {
+
+    &:hover,
+    &.show {
+        .dropdown-toggle {
+            color: $primary-color;
+        }
+    }
+}
+
+.compare-product-title {
+    a {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.compare-actions {
+    .action-link {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.cart-dropdown {
+    .cart-count {
+        background-color: $primary-color;
+    }
+
+    .product-title {
+        a {
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.wishlist-link {
+    .wishlist-count {
+        background-color: $primary-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.search-toggle:hover, 
+.search-toggle:focus, 
+.search-toggle.active {
+    color: $primary-color;
+}
+
+/* Menu */
+.menu {
+
+    li:hover,
+    li.show,
+    li.active {
+        >a {
+            color: $primary-color;
+        }
+    }
+}
+
+.main-nav li a.link-active {
+    color: $primary-color;
+}
+
+.demo-item {
+    a {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.tip {
+    background-color: $primary-color;
+}
+
+.header-bottom {
+    .menu>li>a {
+        &:before {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.category-dropdown {
+    .dropdown-toggle {
+        &:before {
+            background-color: $primary-color;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $primary-color;
+        }
+    }
+
+    &:not(.is-on):hover {
+        .dropdown-toggle {
+            background-color: $primary-color;
+        }
+    }
+
+    &.show {
+        .dropdown-toggle {
+            color: #fff;
+            background-color: $primary-color;
+        }
+    }
+
+    .dropdown-item {
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+
+/* Vertical Menu */
+.menu-vertical {
+
+    li:hover,
+    li.show,
+    li.active {
+        >a {
+            color: $primary-color;
+        }
+    }
+
+    >li:hover,
+    >li.show,
+    >li.active {
+        >a {
+            color: $primary-color;
+        }
+    }
+}
+
+.mobile-menu-close {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.mobile-menu {
+    li {
+        a {
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+
+        &.open,
+        &.active {
+            >a {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.mmenu-btn {
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.mobile-search {
+    .form-control {
+        &:focus {
+            border-color: $primary-color;
+        }
+    }
+}
+
+.nav.nav-pills-mobile {
+    .nav-link {
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            border-bottom-color: $primary-color;
+        }
+    }
+}
+
+.mobile-cats-menu {
+    li {
+        a {
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.mobile-menu-light {
+    .mobile-menu {
+        li {
+
+            &.open,
+            &.active {
+                >a {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .mobile-search {
+        .form-control {
+            &:focus {
+                border-color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Header 4 */
+.header-4 {
+    .header-search {
+        .header-search-wrapper {
+            border-color: $primary-color;
+        }
+    }
+
+    .dropdown.category-dropdown {
+        .dropdown-toggle:not(:hover):not(:focus) {
+            color: $primary-color;
+        }
+    }
+}
+
+@include mq('lg', 'max') {
+    .header-4 {
+        .header-search-visible {
+            .header-search-wrapper {
+                &:before {
+                    border-bottom-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+/* Header 6 */
+.header-6 {
+    .header-middle {
+        a {
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.header-8 {
+    .header-top {
+        color: lighten($primary-color, 31%);
+        background-color: $primary-color;
+    }
+}
+
+/* Header 10 */
+.header-10 {
+    .header-search {
+        .header-search-wrapper {
+            border-color: $primary-color;
+        }
+    }
+
+    .category-dropdown {
+        .dropdown-toggle {
+            background-color: $primary-color;
+        }
+    }
+
+    .menu-vertical {
+        .menu-title {
+            color: $primary-color;
+        }
+    }
+}
+
+/* Header 12 */
+.header-12 {
+    .dropdown.category-dropdown {
+        .dropdown-toggle {
+            background-color: $primary-color;
+        }
+    }
+}
+
+/* Header 13 */
+.header-13 {
+    .dropdown.category-dropdown {
+        .dropdown-toggle {
+            background-color: $primary-color;
+        }
+    }
+}
+
+/* Header 14 */
+.header-14 {
+    .header-search {
+        .header-search-wrapper {
+            border-color: $primary-color;
+        }
+    }
+
+    .dropdown.category-dropdown {
+        .dropdown-toggle {
+            background-color: $primary-color;
+
+        }
+    }
+}
+
+/* Pages */
+.entry-video {
+    a {
+        &:hover,
+        &:focus {
+            &:after {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.entry-meta {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+}
+
+.entry-title {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.entry-cats {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+}
+
+.read-more {
+    &:hover,
+    &:focus {
+        box-shadow: 0 1px 0 0 $primary-color;
+    }
+}
+
+.menu-cat {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    li.active {
+        a {
+            color: $primary-color;
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+}
+
+.widget-search {
+    .btn {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.widget-cats {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.posts-list {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.tagcloud {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.table {
+    .total-col {
+        color: $primary-color;
+    }
+}
+
+.btn.btn-spinner {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.table.table-summary {
+    .summary-shipping-estimate {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+                border-bottom-color: $primary-color;
+            }
+        }
+
+    }
+}
+
+.sidebar-toggler {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+#filter-price-range {
+    color: $primary-color;
+}
+
+.checkout-discount {
+    label {
+        span {
+            color: $primary-color;
+        }
+    }
+
+    .form-control {
+        &:focus {
+            border-color: $primary-color;
+        }
+    }
+}
+
+.table.table-summary {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    .summary-total td {
+        color: $primary-color;
+    }
+}
+
+.accordion-summary {
+    .card-title {
+        a {
+            &:before {
+                border-color: $primary-color;
+            }
+
+            &:after {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+.paypal-link {
+    &:hover,
+    &:focus {
+        color: $primary-color !important;
+    }
+}
+
+.coming-countdown {
+    .countdown-amount {
+        color: $primary-color;
+    }
+
+    &.countdown-separator {
+        .countdown-section:not(:last-child):after {
+            color: $primary-color;
+        }
+    }
+}
+
+.contact-box {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.contact-list {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    i {
+        color: $primary-color;
+    }
+}
+
+.store {
+    a:not(.btn) {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.nav-dashboard {
+    .nav-link {
+        &:hover,
+        &:focus,
+        &.active {
+            color: $primary-color;
+        }
+    }
+}
+
+.form-tab {
+    .form-footer {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.nav-filter {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+
+    .active {
+        a {
+            color: $primary-color;
+            border-bottom-color: $primary-color;
+        }
+    }
+}
+
+.portfolio-title {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.portfolio-tags {
+    a {
+        color: $primary-color;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+}
+
+.btn-product-gallery {
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+    }
+}
+
+.product-gallery-item {
+    &:before {
+        border-color: $primary-color;
+    }
+}
+
+.product-pager-link {
+    &:hover
+    {
+        color: $primary-color;
+
+        span {
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+}
+
+.breadcrumb-nav {
+    .product-pager-link:hover, .product-pager-link:focus {
+        span {
+            box-shadow: none;
+        }
+    }
+}
+
+.product-details {
+    .product-cat {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+                box-shadow: 0 1px 0 $primary-color;
+            }
+        }
+    }
+
+    .product-size {
+        a {
+            &.active,
+            &:hover,
+            &:focus {
+                color: $primary-color;
+                border-color: $primary-color;
+            }
+        }
+    }
+}
+
+.size-guide {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.product-details-action {
+    .btn-cart {
+        color: $primary-color;
+        border-color: $primary-color;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            border-color: $primary-color;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.product-details-tab {
+    .nav.nav-pills {
+        .nav-link {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+                border-bottom-color: $primary-color;
+            }
+        }
+    }
+}
+
+.product-desc-content {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            border-bottom-color: $primary-color;
+        }
+    }
+}
+
+.review {
+    h4 {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.review-action {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+}
+
+.product-details-extended {
+    .nav.nav-pills {
+        .nav-link {
+            &.active,
+            &:hover,
+            &:focus {
+                border-color: $primary-color;
+            }
+        }
+    }
+}
+
+.editor-content {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            box-shadow: 0 1px 0 $primary-color;
+        }
+    }
+
+    blockquote {
+        border-left-color: $primary-color;
+    }
+}
+
+.entry-tags {
+    a {
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+}
+
+.entry-author-details {
+    h4 {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.author-link {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+        box-shadow: 0 1px 0 $primary-color;
+    }
+}
+
+.pager-link {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+
+        &:after {
+            color: $primary-color;
+        }
+    }
+}
+
+.comment-reply {
+    &:hover,
+    &:focus {
+        color: $primary-color;
+        box-shadow: 0 1px 0 $primary-color;
+    }
+}
+
+.comment-user {
+    h4 {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.product-col {
+    .product-title {
+        a {
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Plugins */
+.owl-theme {
+    .owl-nav {
+        [class*='owl-'] {
+            color: $primary-color;
+            // &:not(.disabled):hover {
+            //     border-color: $primary-color;
+            //     background: $primary-color;
+            // }
+        }
+    }
+
+    &.owl-light {
+        .owl-nav {
+            [class*='owl-'] {
+                &:not(.disabled):hover {
+                    border-color: $primary-color;
+                }
+            }
+        }
+        .owl-dots {
+            .owl-dot {
+                &:hover {
+                    span {
+                        border-color: $primary-color;
+                        background: $primary-color;
+                    }
+                }
+
+                &.active {
+                    span {
+                        border-color: $primary-color;
+                        background: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.owl-full {
+    .owl-nav {
+        [class*='owl-'] {
+            color: $primary-color;
+            &:hover,
+            &:focus {
+                color:$primary-color;
+            }
+        }
+    }
+
+    .owl-dots {
+        .owl-dot {
+            span {
+                border-color: $primary-color;
+            }
+
+            &:hover {
+                span {
+                    border-color: $primary-color;
+                    background: $primary-color;
+                }
+            }
+
+            &.active {
+                span {
+                    border-color: $primary-color;
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+
+
+    &.owl-nav-dark {
+        .owl-nav {
+            [class*='owl-'] {
+                &:hover,
+                &:focus {
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+}
+
+.owl-simple {
+    .owl-nav {
+        [class*='owl-'] {
+            &:not(.disabled):hover {
+                color:$primary-color;
+            }
+        }
+    }
+    &.owl-light {
+        .owl-dots {
+            .owl-dot {
+                &:hover {
+                    span {
+                        border-color: $primary-color;
+                        background: $primary-color;
+                    }
+                }
+
+                &.active {
+                    span {
+                        border-color: $primary-color;
+                        background: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.quickView-content {
+    .owl-theme.owl-light .owl-nav [class*='owl-'] {
+        border: none;
+        font-size: 3rem;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            background-color: transparent;
+        }
+    }
+
+    .product-details-action .btn-cart {
+        // transition: color .3s;
+        &:hover,
+        &:focus {
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: #fff;
+        }
+    }
+
+
+    .btn-wishlist,
+    .btn-compare {
+        border: none;
+
+        &:before {
+            color: $primary-color;
+        }
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            span {
+                color: $primary-color;
+            }
+            background-color: transparent;
+        }
+    }
+
+    .btn-fullscreen:hover,
+    .btn-fullscreen:focus {
+        color: #fff;
+        background-color: $primary-color;
+    }
+}
+
+.quickView-content .product-left .carousel-dot {
+    &.active img {
+        opacity: 1;
+        box-shadow: 0 0 0 1px $primary-color;
+    }
+
+    &:hover img,
+    &:focus img {
+        opacity: 1;
+    }
+}
+
+.newsletter-popup-container {
+    .banner-title span {
+        color: $primary-color;
+    }
+}

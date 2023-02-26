@@ -1,0 +1,281 @@
+/* Banners */
+.banners-group {
+    margin-bottom: 1.9rem;
+}
+
+.banner {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+    // background-color: #ccc;
+
+    > a {
+        position: relative;
+        display: block;
+        outline: none !important;
+    }
+
+    img {
+        display: block;
+        max-width: none;
+        // min-height: 20rem;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.banner.banner-menu img {
+    height: 100%;
+}
+
+.banner-content {
+    display: inline-block;
+    position: absolute;
+    padding-top: 0.4rem;
+    left: 2rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+
+    a {
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.banner-big .banner-content.banner-content-center,
+.banner-content-center.banner-content {
+    max-width: none;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.banner-title {
+    color: #333333;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &.text-white {
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.banner-subtitle {
+    color: #616161;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &.text-white {
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.banner-link {
+    font-weight: 400;
+    display: inline-block;
+}
+
+.banner-big {
+    color: #cccccc;
+
+    .banner-content {
+        max-width: 470px;
+        left: 3rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .banner-title {
+        font-size: 3rem;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+
+        + .btn {
+            margin-top: 1rem;
+        }
+    }
+
+    p:last-of-type {
+        margin-bottom: 2.3rem;
+    }
+}
+
+@include mq('md') {
+    .banner-content {
+        left: 3rem;
+    }
+
+    .banner-big {
+        .banner-content {
+            left: 6rem;
+        }
+
+        .banner-title {
+            font-size: 4rem;
+        }
+    }
+}
+
+@include mq('lg') {
+    .banner-content {
+        left: 4rem;
+    }
+
+    .banner-big {
+        .banner-content {
+            left: 10rem;
+        }
+
+        .banner-title {
+            font-size: 5rem;
+        }
+    }
+}
+
+.banner-display {
+    > a {
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            background-color: rgba(51, 51, 51, 0.4);
+            transition: all 0.35s ease;
+        }
+    }
+
+    &:hover {
+        > a:before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .banner-content {
+        padding-top: 0;
+    }
+
+    .banner-title {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    &.banner-link-anim {
+        .banner-title {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .banner-content {
+                padding-bottom: 4.5rem;
+            }
+        }
+    }
+}
+
+.btn.banner-link {
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 0.8rem 1.4rem;
+    min-width: 0;
+    text-transform: uppercase;
+    text-decoration: none !important;
+
+    i {
+        margin-right: 0;
+        margin-left: 0;
+
+        &:first-child {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            margin-left: 0.9rem;
+        }
+    }
+}
+
+.banner-overlay {
+    > a {
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(51, 51, 51, 0.25);
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+    }
+
+    &.banner-overlay-light {
+        > a:after {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    &:hover,
+    &:focus {
+        > a:after {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@include mq('md') {
+    .banner-display {
+        .banner-title {
+            font-size: 2.4rem;
+        }
+    }
+}

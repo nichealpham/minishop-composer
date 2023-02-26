@@ -1,0 +1,52 @@
+.vt-notification {
+
+    &.vt-theme-dark {
+        min-width: 26rem;
+    }
+    
+    > .vt-content > p.vt-paragraph {
+        font-size: 1.2rem;
+    }
+
+    > div.vt-circle {
+        width: 40px;
+        height: 40px
+    }
+
+    > div.vt-content {
+        margin-right: auto;
+        height: auto;
+    }
+
+    >div.vt-progress-bar {
+        margin-bottom: 15px;
+    }
+
+    &.vt-theme-dark {
+        background-color: $primary-color;
+        box-shadow: none;
+
+        &>.vt-progress-bar {
+            background-color: #333;
+
+            &>.vt-progress {
+                background-color: #fff;
+            }
+        }
+
+        &>.vt-content {
+            & >.vt-title, & > .vt-paragraph {
+                color: #fff;
+            }
+        }
+
+        & .vt-success {
+            border-color: #fff;
+
+            & svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+ 

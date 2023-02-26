@@ -1,0 +1,71 @@
+/* Page Header */
+.page-header {
+    padding: 4.6rem 0 5rem;
+    background-color: #ebebeb;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    h1 {
+        color: $headings-text;
+        font: normal 400 3.2rem/1.1 $font-family;
+        letter-spacing: 0em;
+        margin-bottom: 0;
+
+        span {
+            display: block;
+            color: $primary-color;
+            font-size: 1.6rem;
+            margin-top: 0.8rem;
+        }
+    }
+
+    &.page-header-big {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 250px;
+        margin-bottom: 5rem;
+
+        h1 {
+            span {
+                font-size: 1.6rem;
+                margin-top: 0.4rem;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+
+@include mq('md') {
+    .page-header {
+        h1 {
+            font-size: 3.6rem;
+
+            span {
+                font-size: 1.8rem;
+            }
+        }
+
+        &.page-header-big {
+            min-height: 350px;
+        }
+    }
+}
+
+@include mq('lg') {
+    .page-header {
+        h1 {
+            font-size: 4rem;
+
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        &.page-header-big {
+            min-height: 450px;
+        }
+    }
+}

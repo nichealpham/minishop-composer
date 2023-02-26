@@ -1,0 +1,158 @@
+/* Coming Soon */
+.soon {
+    position: relative;
+    background-color: #fff;
+}
+
+.soon-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+    min-height: 100vh;
+    background-color: #fff;
+    z-index: 2;
+    color: $light-text;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.875;
+
+    form,
+    hr {
+        max-width: 496px;
+    }
+
+    &.text-center {
+        p {
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        form,
+        hr,
+        .coming-countdown {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    form {
+        padding-top: 0.5rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        min-width: 140px;
+        margin-top: 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .form-control:not(:focus) {
+        border-color: #dadada;
+    }
+}
+
+.soon-bg {
+    display: none;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.soon-logo {
+    margin-bottom: 2.3rem;
+}
+
+.soon-title {
+    font-weight: 400;
+    letter-spacing: 0em;
+    margin-bottom: 4.2rem;
+}
+
+.coming-countdown {
+    max-width: 476px;
+    min-height: 53px;
+    padding-bottom: 0.7rem;
+
+    .countdown-section {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1;
+        letter-spacing: 0;
+    }
+
+    .countdown-amount {
+        color: $primary-color;
+        font-weight: 400;
+        font-size: 2.4rem;
+        letter-spacing: 0em;
+    }
+
+    &.countdown-separator {
+        .countdown-section:not(:last-child):after {
+            font-size: 30px;
+            margin-left: 8px;
+            color: $primary-color;
+            margin-top: -1rem;
+        }
+    }
+}
+
+@include mq('sm') {
+    .soon-content {
+        font-size: 1.6rem;
+
+        .input-group {
+            flex-direction: row;
+        }
+
+        .btn {
+            margin-left: 1rem;
+            margin-top: 0;
+        }
+
+        .form-control {
+            width: auto;
+        }
+    }
+
+    .coming-countdown {
+        .countdown-section {
+            font-size: 1.6rem;
+        }
+
+        .countdown-amount {
+            font-size: 3rem;
+        }
+    }
+}
+
+@include mq('md') {
+    .soon-content {
+        padding-right: 3rem;
+    }
+
+    .soon-bg {
+        display: block;
+    }
+}
+
+@include mq('xl') {
+    .soon-content {
+        padding-right: 0;
+    }
+}

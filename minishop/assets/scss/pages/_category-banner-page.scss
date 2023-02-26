@@ -1,0 +1,222 @@
+/* Category banner page  */
+.categories-page {
+    .banner {
+        overflow: hidden;
+    }
+
+    .banner > a:not(.banner-link):after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 0.35s ease;
+        background-color: rgba(25, 25, 25, 0.3);
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .banner-badge .banner-link {
+        padding-top: 1.45rem;
+        padding-bottom: 1.45rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 5;
+        bottom: 2rem;
+    }
+
+    .banner-badge .banner-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .banner-badge .banner-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .banner:hover > a:not(.banner-link):after {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.sidebar-filter-overlay {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(25, 25, 25, 0.25);
+    z-index: 10001;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sidebar-filter-active .sidebar-filter-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-filter {
+    position: fixed;
+    left: -350px;
+    top: 0;
+    bottom: 0;
+    z-index: 10002;
+    background-color: #fff;
+    width: 100%;
+    max-width: 350px;
+    overflow-y: scroll;
+    box-shadow: 0.1rem 0 0.6rem 0 rgba(51, 51, 51, 0.5);
+    will-change: transform;
+    visibility: hidden;
+    transition: all 0.35s;
+
+    &.right {
+        left: unset;
+        right: -350px;
+        box-shadow: -0.1rem 0 0.6rem 0 rgba(51, 51, 51, 0.5);
+        will-change: transform;
+        visibility: hidden;
+        transition: all 0.35s;
+    }
+
+    .sidebar-filter-active & {
+        visibility: visible;
+        transform: translateX(350px);
+
+        .mfp-close {
+            display: block;
+        }
+
+        &.right {
+            transform: translateX(-350px);
+        }
+    }
+
+    .widget {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        overflow: hidden;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .widget-clean {
+        color: $dark-text;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        border-bottom: 0.1rem solid #ebebeb;
+        padding: 0 1rem 2.4rem;
+        margin-bottom: 2rem;
+
+        i {
+            font-size: 1.6rem;
+            line-height: 1;
+            margin-right: 1rem;
+        }
+
+        a {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.sidebar-filter-banner.sidebar-shop {
+    .widget:not(.widget-clean) {
+        border-bottom: none;
+        margin-bottom: 4rem;
+    }
+
+    .widget-title {
+        margin-bottom: 1.7rem;
+    }
+}
+
+.sidebar-filter-wrapper {
+    position: relative;
+    padding: 3.5rem 2.7rem 1.5rem;
+}
+
+.product-sidebar-wrapper.sidebar-filter-wrapper {
+    padding-top: 0.5rem;
+}
+
+.sidebar-filter-clear {
+    text-transform: capitalize;
+    margin-left: auto;
+    color: $primary-color;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.sidebar-product {
+    .mfp-close {
+        font: normal normal 2.6rem/1 'molla';
+        color: #666;
+        display: none;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        margin-left: auto;
+    }
+}
+
+.element-tab-page {
+    div:not(.tabs-vertical) > .nav.nav-tabs .nav-item .nav-link.active,
+    div:not(.tabs-vertical) > .nav.nav-tabs .nav-item.show .nav-link {
+        border-color: #d7d7d7 #d7d7d7 #fff;
+    }
+}
+
+@include mq('lg', 'max') {
+    .element-category-page .banner-cat.banner-large img {
+        max-height: 56.3rem;
+    }
+
+    .element-banner-page .banner img {
+        min-height: 20rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .sidebar-filter {
+        left: -300px;
+        max-width: 270px;
+        &.right {
+            left: unset;
+            right: -300px;
+        }
+    }
+
+    .sidebar-filter-active .sidebar-filter {
+        -webkit-transform: translateX(300px);
+        transform: translateX(300px);
+        &.right {
+            -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+        }
+    }
+
+    .sidebar-filter-active .sidebar-fixed-toggler {
+        -webkit-transform: translateX(270px);
+        transform: translateX(270px);
+        &.right {
+            -webkit-transform: translateX(-270px);
+            transform: translateX(-270px);
+        }
+    }
+
+    .sidebar-filter-wrapper {
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+    }
+}

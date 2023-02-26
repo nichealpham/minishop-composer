@@ -1,0 +1,107 @@
+/* Titles */
+.title {
+    font-size: 2.2rem;
+    letter-spacing: -0.03em;
+}
+
+.title-lg {
+    font-weight: 600;
+    font-size: 2.6rem;
+    letter-spacing: 0em;
+}
+
+.title-sm {
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+}
+
+.heading {
+    margin-bottom: 1.6rem;
+
+    &.heading-flex {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    &.heading-center {
+        text-align: center;
+
+        .title {
+            margin-bottom: 1.5rem;
+        }
+
+        .title-lg {
+            margin-bottom: 2.4rem;
+        }
+    }
+}
+
+.title-separator {
+    font-weight: 400;
+    color: #cccccc;
+
+    .text-white & {
+        color: #616161;
+    }
+}
+
+.title-desc {
+    color: #616161;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    margin-bottom: 0;
+}
+
+.heading-right {
+    margin-top: 0.5rem;
+}
+
+.title-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 1px 0 0 $primary-color;
+    }
+}
+
+.title-link i {
+    font-size: 1.5rem;
+}
+
+.title-link i:last-child {
+    margin-left: 0.5rem;
+}
+
+@include mq('md') {
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .title-lg {
+        font-size: 3rem;
+    }
+}
+
+@include mq('lg') {
+    .heading {
+        &.heading-flex {
+            align-items: center;
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+
+    .heading-right {
+        margin-top: 0;
+        margin-left: auto;
+    }
+}

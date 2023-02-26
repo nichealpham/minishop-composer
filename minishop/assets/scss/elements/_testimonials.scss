@@ -1,0 +1,43 @@
+/* Testimonials */
+.testimonial-icon {
+  &:before {
+    font-family: 'molla';
+    content: '\f10d';
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: $primary-color;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.testimonial {
+	img {
+		display: inline-block !important;
+		max-width: 70px;
+		border-radius: 50%;
+		margin-top: 1rem;
+		margin-bottom: 2.1rem;
+	}
+}
+
+.swiper-testimonials {
+	.swiper-nav {
+		.swiper-prev, .swiper-next {
+			top: 65px;
+		}
+	}
+}
+
+.swiper-testimonials-photo {
+	.swiper-nav {
+		.swiper-prev, .swiper-next {
+			top: 110px;
+		}
+	}
+}
+@include mq('sm') {
+}

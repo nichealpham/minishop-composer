@@ -1,0 +1,114 @@
+/* Dashboard */
+.dashboard {
+    @include mq('lg') {
+        .col-lg-3 {
+            -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+            max-width: 30%;
+        }
+
+        .col-lg-9 {
+            -ms-flex: 0 70%;
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
+    }
+
+    label {
+        margin-bottom: 0.2rem;
+    }
+
+    .form-control {
+        margin-bottom: 1.3rem;
+
+        & + .form-control {
+            margin-top: 2rem;
+        }
+    }
+
+    .form-control:not(:focus) {
+        background-color: #f9f9f9;
+    }
+
+    .tab-pane {
+        padding: 0;
+        border: none;
+        line-height: 2.15;
+        padding-bottom: 2rem;
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .btn {
+        min-width: 123px;
+    }
+}
+
+.nav-dashboard {
+    margin-top: -1rem;
+    .nav-link {
+        overflow: hidden;
+        position: relative;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        padding: 1.4rem 0;
+        color: $dark-text;
+        border-bottom: 0.1rem solid #ebebeb;
+
+        &:before {
+            font-family: 'molla';
+            content: '\f274';
+            display: block;
+            font-size: 1.5rem;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            margin-top: -7.5px;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: $primary-color;
+        }
+
+        &.active {
+            padding-left: 2rem;
+
+            &:before {
+                left: 0;
+                opacity: 1;
+            }
+        }
+    }
+    .nav-item.active .nav-link {
+        padding-left: 2rem;
+        color: $primary-color;
+
+        &:before {
+            left: 0;
+            opacity: 1;
+        }
+    }
+}
+
+.card-dashboard {
+    margin-bottom: 3rem;
+    background-color: #f9f9f9;
+    border: 0.1rem solid #ebebeb;
+
+    .card-title {
+        letter-spacing: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-body {
+        padding: 4rem 2.8rem 2rem;
+    }
+}

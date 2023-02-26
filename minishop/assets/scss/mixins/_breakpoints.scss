@@ -1,0 +1,17 @@
+@mixin mq($mq-breakpoint, $mq-width: 'min-width', $mq-breakpoints: $breakpoints) {
+	@if $mq-width == 'max' {
+		$mq-width: 'max-width';
+		$mq-breakpoints: $max-breakpoints;
+	}
+
+	// If $mq-breakpoint is a key that exists in this
+	@if map-has-key($mq-breakpoints, $mq-breakpoint) {
+		$mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+	}
+
+	@media screen and (#{$mq-width}: #{$mq-breakpoint}) {
+		@content;
+	}
+}
+
+// Use @include mq(lg, 'max') for max-width or @include mq(lg)

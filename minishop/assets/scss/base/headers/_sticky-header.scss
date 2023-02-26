@@ -1,0 +1,38 @@
+/* Sticky Header */
+@keyframes fixedHeader {
+	0% {
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+
+	100% {
+		opacity: 1;
+		transform:translateY(0);
+	}
+}
+
+@include mq('lg') {
+	.sticky-header.fixed {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index:1040;
+		animation-name: fixedHeader;
+		animation-duration: .4s;
+		background-color: #fff;
+		box-shadow: 0 3px 6px rgba(51, 51, 51, .05);
+
+	 	.logo {
+	 		margin-top: 0;
+	 		margin-bottom: 0;
+	 	}
+
+	 	&.header-middle {
+			.menu > li > a {
+				padding-top: 2rem;
+				padding-bottom: 2rem;
+			}
+	 	}
+	}
+}

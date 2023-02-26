@@ -1,0 +1,24 @@
+/* About us 2 */
+.member.member-2 {
+	background-color: #fff;
+	max-width: 277px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.member-content {
+		visibility: visible;
+		opacity: 1;
+		padding-top: 1.7rem;
+		padding-bottom: 2.7rem;
+	}
+
+	.member-overlay {
+		color: $dark-text;
+		background-color: rgba(249, 249, 249, .7);
+
+		.social-icons {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}

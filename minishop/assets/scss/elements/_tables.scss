@@ -1,0 +1,32 @@
+/* Tables */
+.table {
+	margin-bottom: 3rem;
+	
+	th {
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 1.5;
+		color: $light-text;
+	}
+
+	th,
+	thead th,
+	td {
+		border-top: none;
+		border-bottom: .1rem solid #ebebeb;
+
+	}
+
+	th,
+	td {
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 1.4rem;
+		padding-bottom: 1.4rem;
+
+	}
+
+	td {
+		vertical-align: middle;
+	}
+}

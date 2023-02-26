@@ -1,0 +1,92 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+}
+
+img[lazy='loading'] {
+    background-color: white;
+}
+
+img[lazy='loaded'] {
+    background-color: white;
+}
+
+.page-enter-active,
+.layout-enter-active,
+.layout-leave-active {
+    transition: opacity 0.3s;
+}
+
+.page-leave-active {
+    transition: opacity 0;
+}
+
+.page-enter,
+.page-leave-active,
+.layout-enter,
+.layout-leave-active {
+    opacity: 0;
+}
+
+.zoom-enter-active {
+    animation: zoomIn 0.2s 'ease-in';
+}
+
+.zoom-leave-active {
+    animation: zoomOut 0.2s 'ease-in';
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform-origin: 50% 50%;
+    }
+
+    to {
+        opacity: 1;
+        transform-origin: 50% 50%;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+
+        transform-origin: 50% 50%;
+    }
+
+    to {
+        opacity: 0;
+        transform-origin: 50% 50%;
+    }
+}
+
+@keyframes showMsg {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

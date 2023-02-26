@@ -1,0 +1,312 @@
+/* Inputs */
+.form-group {
+    margin-bottom: 2rem;
+
+    .form-control,
+    .select-custom {
+        margin-bottom: 0;
+    }
+}
+
+.form-control {
+    height: 40px;
+    padding: 0.85rem 2rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #616161;
+    background-color: #fafafa;
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: 40px;
+}
+
+.form-control-white {
+    border-color: #fff;
+}
+
+.form-control:focus {
+    color: #616161;
+    background-color: #fff;
+    border-color: $primary-color;
+    box-shadow: none;
+    outline: none !important;
+}
+
+.form-control::placeholder {
+    color: #616161;
+}
+
+textarea.form-control {
+    min-height: 130px;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+}
+
+.form-control-rounded {
+    border-radius: 0.2rem;
+}
+
+.input-group-round {
+    .form-control {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    > .input-group-append > .btn {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
+
+label {
+    color: $body-text;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0 0 1.1rem;
+}
+
+.form-text {
+    color: $light-text;
+    line-height: 1.5;
+    margin-top: 0;
+
+    .form-control + & {
+        margin-top: -0.5rem;
+        margin-bottom: 0.6rem;
+    }
+}
+
+small.form-text {
+    font-size: 85%;
+}
+
+.required-field > label::after {
+    content: '*';
+    color: #e02b27;
+    font-size: 1.2rem;
+    margin: 0 0 0 0.45rem;
+}
+
+.required {
+    color: #e02b27;
+    font-size: 1.2rem;
+
+    + .form-footer {
+        margin-top: 0.8rem;
+    }
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0.6rem;
+}
+
+.select-custom {
+    position: relative;
+    margin-bottom: 1rem;
+
+    select {
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    &::after {
+        font-family: 'molla';
+        content: '\f110';
+        position: absolute;
+        display: inline-block;
+        right: 1.9rem;
+        top: 50%;
+        font-size: 1.5rem;
+        transform: translateY(-51%);
+        color: $dark-text;
+    }
+
+    .form-control,
+    .form-control-sm {
+        padding-right: 4rem;
+    }
+}
+
+.form-group-custom-control {
+    margin-top: 2rem;
+
+    .custom-control {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    & + .form-group-custom-control {
+        margin-top: -0.5rem;
+    }
+
+    .custom-control-label {
+        text-transform: initial;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+}
+
+.custom-control {
+    position: relative;
+    padding-left: 2.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.custom-control-label {
+    position: static;
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+    font-size: 1.4rem;
+    padding-left: 2.6rem;
+    margin-left: -2.6rem;
+}
+
+.custom-control-label::before {
+    left: 0;
+    top: 0.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #f9f9f9;
+    border: 1px solid #dadada;
+    box-shadow: none !important;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #dadada;
+}
+
+.custom-control-label::after {
+    left: 0;
+    top: 0.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+}
+
+.custom-checkbox .custom-control-label::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-image: none;
+    font-size: 1rem;
+    font-family: 'molla';
+    content: '\ec2d';
+    line-height: 1;
+    text-align: center;
+    opacity: 0;
+    margin-top: 0.1rem;
+    visibility: hidden;
+    transition: opacity 0.01s;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #333;
+    background-color: #333;
+}
+
+.custom-checkbox
+    .custom-control-input:indeterminate
+    ~ .custom-control-label::before {
+    background-color: #333;
+}
+
+.custom-checkbox
+    .custom-control-input:disabled:checked
+    ~ .custom-control-label::before {
+    background-color: rgba(#333, 0.5);
+}
+
+.custom-checkbox
+    .custom-control-input:disabled:indeterminate
+    ~ .custom-control-label::before {
+    background-color: rgba(#333, 0.5);
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-control.custom-radio {
+    .custom-control-label::before {
+        top: 0.4rem;
+        background-color: #f9f9f9;
+        border-color: #dadada;
+        border-radius: 50%;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: $primary-color;
+        background-color: #fff;
+    }
+
+    .custom-control-label::after {
+        border-radius: 50%;
+        width: 0.6rem;
+        height: 0.6rem;
+        top: 0.9rem;
+        left: 0.5rem;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::after {
+        background-image: none !important;
+        z-index: 2;
+        background-color: $primary-color;
+    }
+}
+
+.form-control-tooltip {
+    position: relative;
+    padding-right: 4rem;
+
+    .input-tooltip {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-size: 2.4rem;
+        color: #616161;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+            color: #000;
+        }
+    }
+}
+
+@include mq('md') {
+}
+
+@include mq('lg') {
+}
+
+//for IE issues in select
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    select::-ms-expand {
+        display: none;
+    }
+    select:focus::-ms-value {
+        background: transparent;
+        color: currentColor;
+    }
+}

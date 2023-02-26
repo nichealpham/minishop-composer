@@ -1,0 +1,52 @@
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-size: 1.5rem !default;
+$sidebar-font-size: 1.5rem !default;
+$footer-font-size: 1.4rem !default;
+$input-font-size: 1.5rem !default;
+$button-font-size: 1.5rem !default;
+
+$primary-color: #cc9966 !default;
+$primary-color-dark: #006699 !default;
+
+$secondary-color: #a6c76c !default;
+
+// $primary-color: #5957cf !default;
+// $primary-color-dark: #5957cf !default;
+
+// $secondary-color: #5957cf !default;
+
+$secondary-color-dark: #2f3946 !default;
+$link-color: $primary-color !default;
+
+$lazy-image-background: #ebebeb;
+
+$border-radius: 0 !default;
+
+$body-text: #333333 !default;
+$light-text: #666666 !default;
+$dark-text: #333333 !default;
+$headings-text: $dark-text !default;
+
+$font-family: 'Open Sans', sans-serif !default;
+$second-font-family: 'Open Sans', sans-serif !default;
+
+$breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1600px,
+    xlst: 1920px
+);
+
+$max-breakpoints: (
+    xs: 479px,
+    sm: 575px,
+    md: 767px,
+    lg: 991px,
+    xl: 1199px,
+    xxl: 1599px
+);

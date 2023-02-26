@@ -1,0 +1,234 @@
+/* Modals */
+.modal-backdrop {
+    background-color: #333;
+
+    &.show {
+        opacity: 0.4;
+    }
+}
+
+.modal-body {
+    padding: 0;
+
+    .close {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+    }
+}
+
+.modal-content {
+    border: none;
+    box-shadow: 5px 10px 16px rgba(51, 51, 51, 0.05),
+        -5px 10px 16px rgba(51, 51, 51, 0.05);
+}
+
+.close {
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: $body-text;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    font: normal normal 2.6rem/1 'molla';
+    color: #666;
+    font-size: 1.8rem;
+    top: 1.5rem;
+    right: 2rem;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.video-modal {
+    position: relative;
+    height: 100%;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+div.vm--container {
+    z-index: 1042;
+}
+
+div.vm--modal {
+    background-color: unset;
+    box-shadow: none;
+}
+
+.quickView-content {
+    padding: 4rem 4rem;
+    background-color: #fff;
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    .product-title,
+    .product-price {
+        font-size: 2.4rem;
+        font-weight: 400;
+        letter-spacing: 0em;
+        margin-bottom: 1rem;
+    }
+
+    .rating-container {
+        margin-bottom: 2rem;
+    }
+
+    p {
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    .details-filter-row label {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    .btn-product {
+        background-color: transparent;
+    }
+
+    .btn-product span {
+        font-size: 1.3rem;
+        letter-spacing: 0.01em;
+        color: #616161;
+        text-transform: uppercase;
+    }
+
+    .product-details-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 2rem;
+        .social-icons {
+            margin-left: 0;
+        }
+    }
+
+    .product-cat {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        color: #616161;
+        span {
+            margin-right: 0.7rem;
+        }
+        a {
+            color: #666;
+        }
+
+        margin-bottom: 0;
+    }
+
+    .product-left {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        flex: 0 0 19.2%;
+        max-width: 19.2%;
+        img {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .btn-compare:before {
+        content: '\f2d0';
+    }
+
+    .btn-wishlist,
+    .btn-compare {
+        border: none;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            span {
+                color: $primary-color;
+            }
+            background-color: transparent;
+        }
+    }
+
+    .details-action-wrapper .btn-product + .btn-product {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .btn-fullscreen {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        z-index: 49;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 4rem;
+        height: 4rem;
+        color: #616161;
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 1;
+        background-color: #fff;
+        box-shadow: 2px 6px 16px rgba(51, 51, 51, 0.05);
+        transition: all 0.35s ease;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: #c96;
+        }
+    }
+
+    .sticky-bar {
+        display: none;
+    }
+}
+
+.quickView-container {
+    overflow: auto;
+    height: calc(100% - 3rem);
+
+    .mfp-close {
+        font: normal normal 2.6rem/1 'molla';
+        position: absolute;
+        color: #666;
+        top: 2.5rem;
+        right: 2.5rem;
+        display: block;
+    }
+}
+
+@include mq('md') {
+    .modal-dialog {
+        max-width: 575px;
+    }
+}
+
+@include mq('sm', 'max') {
+    .quickView-container .mfp-close {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}

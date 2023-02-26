@@ -1,0 +1,84 @@
+/* Lists */
+
+.elements {
+    > div {
+        padding: 1rem;
+        @for $i from 1 through 14 {
+            &:nth-child(#{$i}) {
+                .element-img {
+                    background-position: calc(-200px * (#{$i} - 1)) 0;
+                }
+                .element-hover-img {
+                    background-position: calc(-200px * #{$i} + 100px) 0;
+                }
+            }
+        }
+        > a {
+            display: block;
+        }
+    }
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid #ebebeb;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+        .element-hover-img {
+            visibility: visible;
+            opacity: 1;
+        }
+        .element-img {
+            opacity: 0;
+        }
+        p {
+            color: #333;
+        }
+
+        box-shadow: 0 5px 20px rgba(234, 234, 234, 0.8);
+    }
+
+    p {
+        margin-top: -1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.element-img,
+.element-hover-img {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+}
+
+.element-hover-img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.element-type {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    letter-spacing: 0.01em;
+    color: #666;
+    text-transform: uppercase;
+}
+
+@include mq('374px', 'max') {
+    .element p {
+        font-size: 1.2rem;
+    }
+}

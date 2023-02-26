@@ -1,0 +1,298 @@
+/* Call to Actions */
+.cta {
+	.input-group {
+		margin-bottom: 0;
+	}
+
+	.form-control {
+		height: 46px;
+		padding-top: 1.15rem;
+		padding-bottom: 1.15rem;
+		background-color: #fff;
+
+		&:not(:focus):not(.form-control-white) {
+			border-color: #dadada;
+		}
+	}
+
+	.btn {
+		padding-top: 1.15rem;
+		padding-bottom: 1.15rem;
+	}
+
+	.btn:not(.btn-block) {
+		min-width: 170px;
+	}
+
+	&.bg-image {
+		background-color: #f5f5f5;
+	}
+}
+
+.cta-title {
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 1.2;
+	letter-spacing: -.03em;
+	margin-bottom: 0;
+}
+
+.cta-desc {
+	margin-bottom: 1.5rem;
+}
+
+.cta-horizontal {
+	.form-control {
+		flex-grow: 1;
+		margin-right: 2rem;
+	}
+
+	.form-control,
+	.cta-desc {
+		margin-bottom: 0;
+	}
+}
+.cta-horizontal-box {
+	padding-top: 5.2rem;
+	padding-bottom: 4.8rem;
+}
+
+.cta-heading {
+	padding-top: .7rem;
+	margin-bottom: 2.7rem;
+
+	.cta-title {
+		margin-bottom: .5rem;
+	}
+}
+
+.cta-text {
+	padding-top: .5rem;
+	.cta-title {
+		margin-bottom: 2.1rem;
+	}
+
+	.cta-desc {
+		margin-bottom: 2.3rem;
+	}
+}
+
+.cta-separator {
+	position: relative;
+
+	[class*="col-"] + [class*="col-"]:before {
+ 		content:'';
+		width: .1rem;
+		display: block;
+		height: 80%;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		background-color: #ebebeb;
+	}
+
+	&.bg-image {
+		[class*="col-"] + [class*="col-"]:before {
+			background-color: #dadada;
+		}
+	}
+}
+
+.cta-wrapper {
+	padding-top: 5.6rem;
+	padding-bottom: 5.6rem;
+	max-width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.cta-title {
+		margin-bottom: .6rem;
+	}
+
+	.cta-desc {
+		margin-bottom: 2rem;
+	}
+
+	&.cta-text {
+		max-width: 330px;
+
+		.cta-title {
+			margin-bottom: 1.6rem;
+		}
+
+		.cta-desc {
+			margin-bottom: 2.6rem;
+		}
+	}
+}
+
+.cta-border {
+	padding: 3.9rem 2rem;
+	border: 1rem solid #f5f5f5;
+	text-align: center;
+
+	.cta-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.cta-heading {
+		width: 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin: 0;
+		padding-top: 0;
+		padding-right: 0;
+	}
+
+	.cta-title {
+		margin: 0 0 2rem;
+	}
+
+	.cta-text {
+		position: relative;
+		padding: 0;
+		flex-grow: 1;
+		margin-bottom: 2rem;
+
+		&::before {
+			content: '';
+			background-color: #f5f5f5;
+			width: .5rem;
+			height: 9rem;
+			position: absolute;
+			left: -3px;
+			top: 50%;
+			margin-top: -4.5rem;
+			display: none;
+		}
+	}
+
+	p {
+		max-width: 460px;
+		margin-bottom: 0;
+	}
+}
+
+@include mq('lg') {
+	.cta-border {
+		text-align: left;
+		padding-left: 0;
+		padding-right: 0;
+
+		.cta-content {
+			flex-direction: row;
+			padding-left: 1.5rem;
+		}
+
+		.cta-heading {
+			flex: 0 0 24.7%;
+			max-width: 24.7%;
+			padding-right: 3rem;
+		}
+
+		.cta-title {
+			margin-bottom: 0;
+		}
+
+		.cta-text {
+			margin-right: 2rem;
+			padding-left: 3rem;
+			margin-bottom: 0;
+
+			&::before {
+				display: block;
+			}
+		}
+	}
+}
+
+@include mq('xl', 'max') {
+	.cta-horizontal-box {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@include mq('lg', 'max') {
+	.cta-horizontal {
+		.cta-desc {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.cta-separator [class*="col-"] + [class*="col-"]:before {
+		height: .1rem;
+		width: 80%;
+		left: 10%;
+		top: 0;
+		bottom: auto;
+	}
+
+	.cta-border {
+		.cta-title,
+		.cta-title.text-right {
+			text-align: center !important;
+		}
+	}
+	
+	.cta-border .cta-content {
+		display: block;
+	}
+	.cta-border p {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include mq('md', 'max') {
+	.cta-horizontal .form-control {
+		margin-right: 1rem;
+	}
+
+	.cta {
+		.btn:not(.btn-block) {
+			min-width: 0;
+		}
+	}
+	.cta-wrapper {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+@include mq('sm', 'max') {
+	.cta {
+		.input-group {
+			flex-direction: column;
+			.form-control {
+				width: 100%;
+				margin-right: 0;
+			}
+
+			.btn {
+				margin-left: 0;
+				margin-top: 1rem;
+			}
+
+			.input-group-append, 
+			.input-group-prepend {
+				justify-content: center;
+			}
+		}
+
+		.input-group-round {
+			.form-control,
+			.btn {
+				border-radius: 30px;
+			}
+
+			.input-group-append {
+				justify-content: center;
+			}
+		}
+	}
+}

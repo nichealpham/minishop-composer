@@ -1,0 +1,68 @@
+// Button mixins - variants
+@mixin button-variant(
+  $color, $background, $border, 
+  $color-hover: $color, $hover-background: lighten( $background, 6% ), 
+  $hover-border: lighten($border, 6%),
+  $active-background: darken($background, 10%), 
+  $active-border: darken($border, 10%),
+  $box-shadow: none,
+  $box-shadow-hover: none
+  ) {
+  
+  color: $color;
+  background-color: $background;
+  border-color:  $border;
+  box-shadow: $box-shadow;
+  
+  &:hover,
+  &:focus,
+  &.focus,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle  {
+    color: $color-hover;
+    background-color: $hover-background;
+    border-color:  $hover-border;
+    box-shadow: $box-shadow-hover;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+  }
+}
+
+@mixin button-outline-variant(
+  $color, $color-hover: $color, 
+  $active-background: $color, 
+  $border-color:$color, 
+  $active-border: $color,
+  $box-shadow: none,
+  $box-shadow-hover: none
+  ) {
+  color: $color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $border-color;
+  box-shadow: $box-shadow;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle  {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+    box-shadow: $box-shadow-hover;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+}

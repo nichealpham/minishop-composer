@@ -1,0 +1,451 @@
+/* Buttons */
+.btn-wrap {
+    display: inline-block;
+    margin-bottom: 2rem;
+
+    > span {
+        display: block;
+        color: #ccc;
+        margin-bottom: 0.3rem;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    min-width: 170px;
+    border-radius: 0;
+    white-space: normal;
+    transition: all 0.3s;
+
+    span {
+        line-height: 1;
+    }
+
+    i {
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:focus,
+    &:active {
+        outline: none !important;
+    }
+
+    &:active:focus {
+        box-shadow: none !important;
+    }
+
+    &.btn-minwidth-sm {
+        min-width: 112px;
+    }
+
+    &.btn-minwidth {
+        min-width: 170px;
+    }
+
+    &.btn-minwidth-lg {
+        min-width: 218px;
+    }
+}
+
+.btn:active {
+    outline: none;
+}
+
+.btn-rounded {
+    border-radius: 0.2rem;
+}
+
+.btn-round {
+    border-radius: 3rem;
+}
+
+.btn-lg {
+    font-weight: 500;
+    font-size: 1.5rem;
+    min-width: 170px;
+    padding: 1.1rem 2rem;
+
+    i {
+        &:first-child {
+            margin-right: 1.4rem;
+        }
+
+        &:last-child {
+            margin-left: 1.4rem;
+        }
+    }
+}
+
+.btn-more {
+    padding-top: 1.15rem;
+    padding-bottom: 1.15rem;
+    min-width: 230px;
+    text-transform: uppercase;
+}
+
+.btn-link {
+    padding: 0.4rem 1rem;
+    min-width: 0;
+    color: $primary-color;
+    text-decoration: none;
+    border: none;
+    border-bottom: 0.1rem solid transparent;
+    letter-spacing: 0;
+    font-size: 1.4rem;
+    min-width: 0;
+    font-family: $font-family;
+
+    &.btn-link-dark {
+        color: #333;
+    }
+
+    &:hover,
+    &:focus,
+    .btn-link-dark:hover,
+    .btn-link-dark:focus {
+        color: $primary-color;
+        text-decoration: none;
+        border-color: $primary-color;
+    }
+
+    i {
+        &:first-child {
+            margin-right: 1rem;
+        }
+
+        &:last-child {
+            margin-left: 1rem;
+        }
+    }
+}
+
+.btn-hover-text {
+    display: none;
+}
+
+.btn:hover,
+.btn:focus {
+    .btn-text {
+        display: none;
+    }
+
+    .btn-hover-text {
+        display: inline-block;
+    }
+}
+
+.btn-primary {
+    @include button-variant(
+        #fff,
+        $primary-color,
+        $primary-color,
+        #fff,
+        $secondary-color,
+        $secondary-color
+    );
+}
+
+.btn-secondary {
+    @include button-variant(
+        #fff,
+        $secondary-color,
+        $secondary-color,
+        #fff,
+        $primary-color,
+        $primary-color
+    );
+}
+
+.btn-white {
+    @include button-variant(
+        #333333,
+        #fff,
+        #fff,
+        #fff,
+        $primary-color,
+        $primary-color
+    );
+}
+
+.btn-white-2 {
+    @include button-variant(
+        #333333,
+        #fff,
+        #fff,
+        #fff,
+        $secondary-color,
+        $secondary-color
+    );
+}
+
+.btn-primary-white {
+    @include button-variant(
+        #fff,
+        $primary-color,
+        $primary-color,
+        $primary-color,
+        #fff,
+        #fff
+    );
+}
+
+.btn-white-primary {
+    @include button-variant(
+        $primary-color,
+        #fff,
+        #fff,
+        #fff,
+        $primary-color,
+        $primary-color
+    );
+}
+
+.btn-dark {
+    @include button-variant(
+        #fff,
+        #333,
+        #333,
+        #fff,
+        $primary-color,
+        $primary-color
+    );
+}
+
+.btn-outline {
+    @include button-outline-variant(
+        $primary-color,
+        $primary-color,
+        transparent,
+        #ebebeb,
+        #ebebeb,
+        0 5px 10px rgba(0, 0, 0, 0.05),
+        0 5px 10px rgba(0, 0, 0, 0.15)
+    );
+}
+
+.btn-outline-primary {
+    @include button-outline-variant(
+        $primary-color,
+        $primary-color,
+        transparent,
+        $primary-color,
+        #ebebeb,
+        none,
+        0 5px 10px rgba(0, 0, 0, 0.05)
+    );
+}
+
+.btn-outline-primary-2 {
+    @include button-outline-variant(
+        $primary-color,
+        #fff,
+        $primary-color,
+        $primary-color,
+        $primary-color,
+        none,
+        none
+    );
+}
+
+.btn-outline-light {
+    @include button-outline-variant(
+        #fff,
+        $primary-color,
+        transparent,
+        #fff,
+        #fff
+    );
+}
+
+.btn-outline-dark {
+    @include button-outline-variant(
+        #333333,
+        $primary-color,
+        transparent,
+        #d7d7d7,
+        #ebebeb,
+        none,
+        0 5px 10px rgba(0, 0, 0, 0.05)
+    );
+}
+
+.btn-outline-dark-2 {
+    @include button-outline-variant(
+        #333333,
+        $primary-color,
+        #fafafa,
+        #ebebeb,
+        #ebebeb,
+        none,
+        none
+    );
+}
+
+.btn-outline-dark-3 {
+    @include button-outline-variant(
+        #333333,
+        $primary-color,
+        transparent,
+        #d7d7d7,
+        $primary-color,
+        none,
+        none
+    );
+}
+
+.btn-outline-darker {
+    @include button-outline-variant(
+        #333333,
+        #fff,
+        $primary-color,
+        #d7d7d7,
+        $primary-color,
+        none,
+        none
+    );
+}
+
+.btn-outline-gray {
+    @include button-outline-variant(
+        #333333,
+        #fff,
+        $primary-color,
+        #959595,
+        $primary-color,
+        none,
+        none
+    );
+}
+
+.btn-outline-lightgray {
+    @include button-outline-variant(
+        #333333,
+        $primary-color,
+        #f5f6f9,
+        #ebebeb,
+        #ebebeb,
+        none,
+        none
+    );
+}
+
+.btn-shadow {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+.btn-outline-white {
+    @include button-outline-variant(
+        #fff,
+        #fff,
+        $primary-color,
+        #fff,
+        $primary-color,
+        none,
+        none
+    );
+}
+
+.btn-outline-white-2 {
+    @include button-outline-variant(
+        #fff,
+        #fff,
+        $secondary-color,
+        #fff,
+        $secondary-color,
+        none,
+        none
+    );
+}
+
+.btn-outline-white-3 {
+    @include button-outline-variant(#fff, #333, #fff, #fff, #fff, none, none);
+}
+
+.btn-outline-white-4 {
+    @include button-outline-variant(
+        #fff,
+        $primary-color,
+        #fff,
+        #fff,
+        #fff,
+        none,
+        none
+    );
+}
+
+.bg-image {
+    .btn-wrap {
+        > span {
+            color: #616161;
+        }
+    }
+
+    .btn-link-dark {
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+    .btn-outline-primary {
+        &:hover,
+        &:focus,
+        &.focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
+            color: #fff;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+    .btn-outline-dark {
+        color: #fff;
+        border-color: #fff;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
+            color: $primary-color;
+            background-color: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+@include mq('992px') {
+    .btn-close.btn-product {
+        display: none;
+    }
+}
