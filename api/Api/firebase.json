@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "minishop-public-open-source",
+  "private_key_id": "axxxx71b31c3a8d398b293axxxxf659a4b2f86bc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nxxxxvQIBADANBgkqhkiG9w0BAQEFAxxxxKcwggSjAgEAAoIxxxxraSm+pQIz/Wtx\nIOjokroxLCo2+GTdM4XR5Kez2snerFrZs9Jz8pIw+nQILCSpXPgwxWPPmZFi93G3\np7eo0X5o4fb1j8F58opPFlZwqhyQf9qjE+Sp/gVoYKzS3WqrYsQb5fQTLw7imtpB\nT2CQG1R2xttNxtG2vvnzHdP+4KPl7X9kvLWFcFldRqKaFicNMGmDEldagc4uHg6p\nVowT3KRzawV4Bq67tj50c09zzpV3YaNc61pMnNsg4BgVYrIrYhA2S6/+M79OXwqv\nXJbJo5PTjVQC3Qm1sc/t1zDaZjbX9GoKJdh2O5qDpP+7G1nYCZysWfZL4FZNZIO4\ngA69tl77AgMBAAECggEAA44MSBW6/Hdf1Y+gVPEfZxVVO3ZI/ToW0eS4l6ciHaSc\nbmcSJnEcQrjG/u5kxOsWg0hstVRS1WcarCY7IwdT5E/0uQtbW1tCLrlgtI3KnDKS\nnGQ1ZKh4gJLUsruxxxxbNRWT9hvj5qOIguc8XPC8KTR0PYzch4+MC9SNXiasL4Cw\nkdegzA/XOaCR0dkVvLde3921lF5Z+KJsb+flopGHdGt7zX2Fu+fLUeMICA1jxkgH\nnVVC5lBo8GA6ZC2XjZXJNczoU+KtBXbTOxPdqTQjk05l4o0wuZ+F03kGh98DfUuS\nv2+e5ZDQNI+lvTUxS7uD23XiNeyrEu3oPfeLjAy2eQKBgQDY0v9Xo6pZhT8ipoTK\nvO49p0ON6XiIYMiq+5imaD2ipP96sdTV5VdgDqMg3k8zG13qa4nHsn1GvEnYaBd4\nUc/Btz/Cd0/mq/hvImbbFZxE/3yeq3adZNRLOTVjf12zYdlpcOb8ZRQfjUCfPH+G\n4UplasjpbpTNHVNj+CsiZCRE+QKBgQDKYZw43draLgTHWhR30ZqNsZHtrzR3b2XT\nPu27A/VEbebmucPe6Nri+mslrzDf5PNzHzyMn5cKX0gYfHuWrGXM3QLs+C6rn6LH\nxMGb/AQlxzslOzIypyViPP6YetstvCj+tp8jarTxhYDrFc3suB/iuP+Uc0bDvxdm\nyICWKV3kkwKBgQCxxxxx33oenRR12/Nswa00PR5B14Qc/G2Y0XZ3arBrurSMo6wR\n9vaYHsaNCFI2BnKfoLGXKaflF0nwsEblT34bXxlq5hmH/ty8Tn5Ntz2QsbhG/vAG\noyclSvtrUj+FULPC/760nVccMurhpua+vbV5b3zKiMEHdjj6ysbpEWf1QQKBgAMx\naw+SoINUuoqSp0QEsJWPuaewXfmMbmTY11NeCp6bxUran3aC4gE2xj3/95twt06X\nrZLiabWmLzMDs8d6zNhgnE001Ter+xt/xTY60a3u6MX7mx0lefeE0teBCLg+Ab+T\nDgu3AUfWPWR4IZmchhRDqvSipPktqKbcfvrfiDW1AoGAZPzaXKlbKuHy7tcvzYS6\nG6EdsU52wMOQhOYwwZ8NrqkRg5o7hrbMkoBnVZ2A4ayu/tkCSqmc45s/JTRniqOD\nBFpPEL4GJuK0AiP1NuBfz0OiVOmBVO+vKY5uBaPvxWeZHgIYYXJrZyvR+AklM85K\nQLKNIIEYap0T4yzpz5rI+KE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-tuq8r@minishop-public-open-source.iam.gserviceaccount.com",
+  "client_id": "11xxxx955863xxxx80051",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tuq8r%40minishop-public-open-source.iam.gserviceaccount.com"
+}
