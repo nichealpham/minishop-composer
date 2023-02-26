@@ -562,7 +562,7 @@ namespace Api.Business
         {
             if (String.IsNullOrEmpty(body.dest)) return false;
 
-            string url = "https://us-central1-sandrasoft-8fe2b.cloudfunctions.net/sendMail";
+            string url = "https://us-central1-sandrasoft-xxxxx.cloudfunctions.net/sendMail";
 
             var json = JsonSerializer.Serialize(body);
             // Console.WriteLine(body.dest);

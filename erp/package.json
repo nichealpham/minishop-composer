@@ -1,0 +1,73 @@
+{
+  "name": "his-clinic",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && firebase deploy"
+  },
+  "dependencies": {
+    "@capacitor-community/fcm": "^2.0.2",
+    "@capacitor/android": "^3.4.3",
+    "@capacitor/camera": "^1.3.1",
+    "@capacitor/cli": "^3.4.3",
+    "@capacitor/core": "^3.4.3",
+    "@capacitor/ios": "^3.4.3",
+    "@ckeditor/ckeditor5-vue2": "^3.0.1",
+    "@capacitor/keyboard": "^1.2.3",
+    "@capacitor/push-notifications": "^1.0.9",
+    "capacitor-firebase-auth": "^3.0.0",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "firebase": "^8.9.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "register-service-worker": "^1.7.1",
+    "v-mask": "^2.2.4",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.25.1",
+    "vue-qr": "^3.2.2",
+    "vue-qrcode-reader": "^3.0.6",
+    "vue-router": "^3.5.2",
+    "vue-styled-components": "^1.6.0",
+    "vue-toastification": "^1.7.11",
+    "vuetify": "^2.6.7",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-pwa": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.2",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

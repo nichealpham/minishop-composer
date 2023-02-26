@@ -1,0 +1,114 @@
+@import "../../App.scss";
+
+.block__content.report {
+  margin-top: 20px;
+  padding: 0px;
+  width: 100%;
+  padding: 10px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // small screen
+  .report__small__screen {
+    display: none;
+
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    .report__item:last-child {
+      margin-right: 0px;
+    }
+
+    .report__item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      border-radius: 20px;
+      height: auto;
+      min-width: 11vw;
+      width: 15vw;
+      box-sizing: content-box;
+      padding: 20px 0 10px;
+      margin-right: 15px;
+      background-color: #ffffff;
+      @media screen and (max-width: 819px) {
+        min-width: 16vw;
+        width: 20vw;
+        padding: 15px 10px 8px;
+        margin-right: 10px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-right: 20px;
+        width: 15%;
+        min-width: 80px;
+        max-width: 120px;
+      }
+
+      .box__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          border-radius: 20px;
+          @media screen and (max-width: 819px) {
+            border-radius: 15px;
+          }
+          height: 6vh;
+          width: 6vh;
+          padding: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i {
+            color: white;
+          }
+        }
+        .icon.amount__patient {
+          background-color: $primaryColor;
+        }
+
+        .icon.amount__doctor {
+          background-color: #568fff;
+        }
+
+        .icon.amount__clinic {
+          background-color: #00bcd4;
+        }
+
+        .icon.amount__episode {
+          background-color: #4caf50;
+        }
+
+        .icon.amount__booking {
+          background-color: #e91e63;
+        }
+      }
+
+      .caption {
+        margin: 10px 0px;
+        font-weight: 500;
+        font-size: 1.02rem !important;
+        text-transform: capitalize;
+        @media screen and (max-width: 819px) {
+          font-size: 0.92rem !important;
+          word-spacing: 1000px;
+        }
+      }
+
+      .number {
+        font-weight: bold;
+        margin-top: -5px;
+        font-size: 1.6rem !important;
+        @media screen and (max-width: 819px) {
+          font-size: 1.5rem !important;
+        }
+      }
+    }
+  }
+}
