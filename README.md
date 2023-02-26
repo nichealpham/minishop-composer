@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://gramme.io/cassand"><img src="https://nichealpham.github.io/Cassandra-project/public/images/startup.png" alt="Markdownify" width="160"></a>
   <br>
-  <span style="font-size:120px">Minishop Open-Source</span>
+  <span style="font-size:120px">Minishop Composer</span>
   <br>
   <br>
   <a href="https://www.youtube.com/watch?v=DjqP67_SnsY&t=335s">
